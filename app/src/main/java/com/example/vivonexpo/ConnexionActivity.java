@@ -82,17 +82,18 @@ public class ConnexionActivity extends AppCompatActivity{
 
                 if (responseStr.compareTo("false")!=0){
                     try {
-                        JSONObject etudiant = new JSONObject(responseStr);
+                        JSONObject utilisateur = new JSONObject(responseStr);
 
-
-                        if(etudiant.getString("statut").compareTo("staff")!=0) {
+                        Log.d("Test",utilisateur.getString("statut"));
+                        if(utilisateur.getString("statut").equals("staff")) {
                             Intent intent = new Intent(ConnexionActivity.this, staff.class);
-                            intent.putExtra("etudiant", etudiant.toString());
+                            intent.putExtra("staff", utilisateur.toString());
                             startActivity(intent);
                         }
                         else {
+                            Log.d("Test","Je suis dans la vue exposant");
                             Intent intent = new Intent(ConnexionActivity.this, exposantActivity.class);
-                            intent.putExtra("etudiant", etudiant.toString());
+                            intent.putExtra("exposant", utilisateur.toString());
                             startActivity(intent);
                         }
                     }
