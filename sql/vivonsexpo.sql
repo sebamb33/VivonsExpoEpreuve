@@ -53,17 +53,17 @@ CREATE TABLE IF NOT EXISTS `demande` (
   `dateD` date DEFAULT NULL,
   `motif` varchar(40) DEFAULT NULL,
   `statusDemande` tinyint(1) NOT NULL,
-  `Login` varchar(25) NOT NULL,
+  `id` int(10) NOT NULL,
   PRIMARY KEY (`numD`),
-  KEY `DEMANDE_UTILISATEUR_FK` (`Login`)
+  KEY `DEMANDE_UTILISATEUR_FK` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `demande`
 --
 
-INSERT INTO `demande` (`numD`, `dateD`, `motif`, `statusDemande`, `Login`) VALUES
-('1', '2021-03-17', 'Exemple motif', 0, 'root');
+INSERT INTO `demande` (`numD`, `dateD`, `motif`, `statusDemande`, `id`) VALUES
+('1', '2021-03-17', 'Exemple motif', 0, '1');
 
 -- --------------------------------------------------------
 
@@ -140,10 +140,10 @@ CREATE TABLE IF NOT EXISTS `stand` (
   `codeA` varchar(2) NOT NULL,
   `numT` varchar(2) NOT NULL,
   `numS` varchar(3) NOT NULL,
-  `Login` varchar(25) DEFAULT NULL,
+  `id` int(10) DEFAULT NULL,
   PRIMARY KEY (`numH`,`codeA`,`numT`,`numS`),
   KEY `STAND_TRAVEE0_FK` (`numT`),
-  KEY `STAND_UTILISATEUR1_FK` (`Login`)
+  KEY `STAND_UTILISATEUR1_FK` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -200,6 +200,7 @@ INSERT INTO `univers` (`codeU`, `libelleU`, `numH`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `Login` varchar(25) NOT NULL,
   `Mdp` varchar(35) DEFAULT NULL,
   `nom` varchar(25) DEFAULT NULL,
@@ -210,11 +211,11 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `raisonSociale` varchar(40) DEFAULT NULL,
   `activite` varchar(25) DEFAULT NULL,
   `anneeInscription` int(11) DEFAULT NULL,
-  `siteInternet` varchar(100) NOT NULL,
-  `dejaExpose` tinyint(1) NOT NULL,
-  `etatInscription` tinyint(1) NOT NULL,
-  `codeS` varchar(2) NOT NULL,
-  PRIMARY KEY (`Login`),
+  `siteInternet` varchar(100) DEFAULT NULL,
+  `dejaExpose` tinyint(1) DEFAULT NULL,
+  `etatInscription` tinyint(1) DEFAULT NULL,
+  `codeS` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
   KEY `UTILISATEUR_SECTEUR0_FK` (`codeS`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -222,8 +223,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Contenu de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`Login`, `Mdp`, `nom`, `prenom`, `telephone`, `mail`, `statut`, `raisonSociale`, `activite`, `anneeInscription`, `siteInternet`, `dejaExpose`, `etatInscription`, `codeS`) VALUES
-('root', '1234', 'root', 'root', '0668191385', 'seb@gmail.com', 'exposant', 'sebAndCo', 'Agriculture', 2021, 'lol', 0, 0, '1');
+INSERT INTO `utilisateur` (`id`,`Login`, `Mdp`, `nom`, `prenom`, `telephone`, `mail`, `statut`, `raisonSociale`, `activite`, `anneeInscription`, `siteInternet`, `dejaExpose`, `etatInscription`, `codeS`) VALUES
+('1','root', '1234', 'root', 'root', '0668191385', 'seb@gmail.com', 'exposant', 'sebAndCo', 'Agriculture', 2021, 'lol', 0, 0, '1');
 
 --
 -- Contraintes pour les tables exportées
@@ -239,7 +240,7 @@ ALTER TABLE `allee`
 -- Contraintes pour la table `demande`
 --
 ALTER TABLE `demande`
-  ADD CONSTRAINT `DEMANDE_UTILISATEUR_FK` FOREIGN KEY (`Login`) REFERENCES `utilisateur` (`Login`);
+  ADD CONSTRAINT `DEMANDE_UTILISATEUR_FK` FOREIGN KEY (`id`) REFERENCES `utilisateur` (`id`);
 
 --
 -- Contraintes pour la table `secteur`
@@ -253,7 +254,7 @@ ALTER TABLE `secteur`
 ALTER TABLE `stand`
   ADD CONSTRAINT `STAND_ALLEE_FK` FOREIGN KEY (`numH`, `codeA`) REFERENCES `allee` (`numH`, `codeA`),
   ADD CONSTRAINT `STAND_TRAVEE0_FK` FOREIGN KEY (`numT`) REFERENCES `travee` (`numT`),
-  ADD CONSTRAINT `STAND_UTILISATEUR1_FK` FOREIGN KEY (`Login`) REFERENCES `utilisateur` (`Login`);
+  ADD CONSTRAINT `STAND_UTILISATEUR1_FK` FOREIGN KEY (`id`) REFERENCES `utilisateur` (`id`);
 
 --
 -- Contraintes pour la table `travee`
