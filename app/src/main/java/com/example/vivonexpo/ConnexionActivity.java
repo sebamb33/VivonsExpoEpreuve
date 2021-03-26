@@ -14,7 +14,7 @@ public class ConnexionActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        //je recupere mon bouton avec sont ID
+        //je recupere mon bouton avec son ID
         final Button buttonQuitter = (Button) findViewById(R.id.buttonQuitterAuthentification);
         //je rajoute un evenement click sur le boutton
         buttonQuitter.setOnClickListener(new View.OnClickListener() {

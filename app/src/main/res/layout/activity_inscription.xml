@@ -6,4 +6,178 @@
     android:layout_height="match_parent"
     tools:context=".InscriptionActivity">
 
+    <EditText
+        android:id="@+id/editTextTextInscriptionSite"
+        android:layout_width="162dp"
+        android:layout_height="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionMail"
+        android:layout_width="162dp"
+        android:layout_height="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionTelephone"
+        android:layout_width="162dp"
+        android:layout_height="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionActiviteEntreprise"
+        android:layout_width="165dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionSecteurSalon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secteur du salon souhaité :"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionExposition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exposez-vous pour la 1ère fois sur le salon ?"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="414dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site internet"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telephone"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prenom"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionActiviteEntreprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activité de l'entreprise :"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionRaison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raison sociale :"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <Button
+        android:id="@+id/buttonInscriptionExposant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="28dp"
+        android:text="S'inscrire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchInscriptionExposition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionRaisonSociale"
+        android:layout_width="174dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionNom"
+        android:layout_width="162dp"
+        android:layout_height="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionPrenom"
+        android:layout_width="182dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <Spinner
+        android:id="@+id/spinnerInscriptionSecteur"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="169dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInscriptionExposant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonInscriptionQuitter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="28dp"
+        android:text="Quitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

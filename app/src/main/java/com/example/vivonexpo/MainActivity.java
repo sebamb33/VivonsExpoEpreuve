@@ -25,5 +25,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        //je recupere mon bouton avec son ID
+        final Button buttonInscription = (Button) findViewById(R.id.buttonInscription);
+        //je rajoute un evenement click sur le boutton
+        buttonInscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //J'appelle la classe InscriptionActivity
+                Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
