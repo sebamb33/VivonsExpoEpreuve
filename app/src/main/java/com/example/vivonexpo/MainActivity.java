@@ -25,5 +25,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // Tout les bouttonUnivers Vont vers
+        final Button buttonUniversVivonMaison =(Button) findViewById((R.id.buttonUniversMaison));
+
+        buttonUniversVivonMaison.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
-}
+
+
+    }

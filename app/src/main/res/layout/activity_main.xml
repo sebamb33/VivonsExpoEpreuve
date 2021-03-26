@@ -7,40 +7,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
+    <Button
+        android:id="@+id/buttonUniversMaison"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:paddingVertical="20dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#EA5A0B"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="0dp"
+        android:text="VIVONS MAISON"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+    <Button
+        android:id="@+id/buttonUniversSport"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:paddingVertical="20dp"
+        android:text="100% sport"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonUniversMaison"
+        tools:ignore="MissingConstraints"
+        />
+    <Button
+        android:id="@+id/buttonUniversFetes"
+        android:layout_width="80dp"
+        android:paddingVertical="20dp"
+        android:layout_height="75dp"
+        android:text="Les Fêtes"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonUniversSport"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/buttonUniversAuto"
+        android:layout_width="80dp"
+        android:paddingVertical="20dp"
+        android:text="Vivons Auto"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/buttonUniversFetes"
+        tools:ignore="MissingConstraints"
+        android:layout_height="75dp" />
+    <Button
+        android:id="@+id/buttonUniversEvasion"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:paddingVertical="20dp"
+        android:text="VivonsEvasion"
+        android:textSize="10sp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@id/buttonUniversAuto"
+        />
 
     <Button
         android:id="@+id/buttonConnexion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#EA5A0B"
         android:paddingHorizontal="10dp"
         android:paddingTop="0dp"
         android:text="Connexion"
         android:textSize="10sp"
-        android:backgroundTint="#EA5A0B"
+        android:layout_marginLeft="5dp"
         app:layout_constraintRight_toLeftOf="@id/buttonInscription"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
     <Button
         android:id="@+id/buttonInscription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:paddingHorizontal="10dp"
-        android:text="Inscription"
-        android:textSize="10sp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:backgroundTint="#EA5A0B"
         android:paddingTop="0dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-
-
-
+        android:text="Inscription"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonConnexion"
+        app:layout_constraintTop_toTopOf="@id/buttonConnexion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
