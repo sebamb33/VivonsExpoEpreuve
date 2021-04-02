@@ -12,17 +12,20 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.VivonExpo">
-        <activity android:name=".VisiteurActivity"></activity>
-        <activity android:name=".InscriptionActivity" />
-        <activity android:name=".ConnexionActivity" />
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".VisiteurActivity"></activity>
+        <activity android:name=".InscriptionActivity" />
+        <activity android:name=".ConnexionActivity" />
         <activity android:name=".exposantActivity"/>
         <activity android:name=".staff"/>
+        <activity android:name=".gestionUniversActivity"/>
+
     </application>
 
 </manifest>

@@ -23,5 +23,66 @@
         />
 
 
+    <Button
+        android:id="@+id/buttonGestionUnivers"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#EA5A0B"
+        android:text="Gestion secteur et univers"
+        android:layout_marginTop="70dp"
+        android:textSize="13sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNomStaff"
+        tools:ignore="MissingConstraints"
+        />
+
+
+    <Button
+        android:id="@+id/buttonGestionDesStands"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#EA5A0B"
+        android:text="Gestion des stands"
+        android:layout_marginTop="35dp"
+        android:textSize="13sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGestionUnivers"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Button
+        android:id="@+id/buttonGestionInscriptionExposant"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#EA5A0B"
+        android:text="Gestion des inscriptions exposants"
+        android:layout_marginTop="35dp"
+        android:textSize="13sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGestionDesStands"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Button
+        android:id="@+id/buttonRepartitionZone"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#EA5A0B"
+        android:text="Gestion des zones"
+        android:layout_marginTop="35dp"
+        android:textSize="13sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGestionInscriptionExposant"
+        tools:ignore="MissingConstraints"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
