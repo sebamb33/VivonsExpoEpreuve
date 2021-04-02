@@ -32,11 +32,6 @@ class UtilisateurDAO{
 		return $reponse;
 	}
 
-<<<<<<< HEAD
-	
-
-}
-=======
 
 	public static function inscription($unLogin, $unMdp, $unNom, $unPrenom, $unTelephone, $unMail, $unStatut, $uneRaisonSociale, $uneActivite, $uneAnneeInscription, $unSiteInternet, $dejaExpose, $unEtatInscription, $unCodeS){
 		try{
@@ -67,4 +62,3 @@ class UtilisateurDAO{
 		return $reponse;
 	}
 }
->>>>>>> dd6ebe8de61b97f199911137a8b3346c84a69e48
