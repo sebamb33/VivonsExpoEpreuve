@@ -20,17 +20,23 @@ class UtilisateurDAO{
 		return $reponse;
 	}
 
-	public static function getSecteurs(){
-		try{
-			$sql = "select * from secteur" ;
-			$requetePrepa = DBConnex::getInstance()->prepare($sql);
-			$requetePrepa->execute();
-			$reponse = $requetePrepa->fetch(PDO::FETCH_ASSOC);
-		}catch(Exception $e){
-			$reponse = "";
-		}
-		return $reponse;
-	}
+
+
+	public static function getLibelleSecteurs(){
+        $listeLibelleSecteurs = array();
+        $requetePrepa = DBConnex::getInstance()->prepare("select libelleS from secteur");
+    
+        $requetePrepa->execute();
+        $listeLibelleSecteurs = $requetePrepa->fetchAll(PDO::FETCH_ASSOC); 
+
+        foreach ($listeLibelleSecteurs as $unSecteur){
+
+            array_push($listeLibelleSecteurs, $unSecteur);
+        }
+
+        return $listeLibelleSecteurs;
+        
+    }
 
 
 	public static function inscription($unLogin, $unMdp, $unNom, $unPrenom, $unTelephone, $unMail, $unStatut, $uneRaisonSociale, $uneActivite, $uneAnneeInscription, $unSiteInternet, $dejaExpose, $unEtatInscription, $unCodeS){
