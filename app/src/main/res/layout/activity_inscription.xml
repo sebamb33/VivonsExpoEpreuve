@@ -6,16 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".InscriptionActivity">
 
+
+    <TextView
+        android:id="@+id/textViewInscriptionRaison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raison sociale :"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineActiviteTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
+        app:layout_constraintTop_toTopOf="@+id/guidelineRaisonTop" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionRaisonSociale"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineActiviteTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
+        app:layout_constraintTop_toTopOf="@+id/guidelineRaisonTop" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionActiviteEntreprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activité de l'entreprise :"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineNomTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
+        app:layout_constraintTop_toTopOf="@+id/guidelineActiviteTop" />
+
+    <EditText
+        android:id="@+id/editTextTextInscriptionLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMdpTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
+        app:layout_constraintTop_toTopOf="@+id/guidelineLoginTop" />
+
     <EditText
         android:id="@+id/editTextTextInscriptionMdp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTelephoneTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextInscriptionMail" />
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
+        app:layout_constraintTop_toTopOf="@+id/guidelineMdpTop" />
 
     <EditText
         android:id="@+id/editTextTextInscriptionSite"
@@ -23,9 +71,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textViewInscriptionExposition"
-        app:layout_constraintEnd_toEndOf="@id/guideline5"
-        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineEditTextBegin"
         app:layout_constraintTop_toBottomOf="@+id/guidelineSiteTop" />
 
     <EditText
@@ -34,9 +83,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineMdpTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineLoginTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
         app:layout_constraintTop_toTopOf="@+id/guidelineMailTop" />
 
     <EditText
@@ -45,9 +95,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSiteTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
         app:layout_constraintTop_toTopOf="@+id/guidelineTelephoneTop" />
 
     <EditText
@@ -56,9 +107,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelineNomTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
         app:layout_constraintTop_toTopOf="@+id/guidelineActiviteTop" />
 
     <TextView
@@ -67,9 +119,10 @@
         android:layout_height="wrap_content"
         android:text="Secteur du salon souhaité :"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerSecteur"
-        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelineSecteurTop" />
 
@@ -79,8 +132,9 @@
         android:layout_height="0dp"
         android:text="Exposez-vous pour la 1ère fois sur le salon ?"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineSecteurTop"
-        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelineExpositionTop" />
 
@@ -90,8 +144,9 @@
         android:layout_height="wrap_content"
         android:text="Site internet :"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineExpositionTop"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
         app:layout_constraintTop_toBottomOf="@+id/guidelineSiteTop" />
 
@@ -100,8 +155,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="E-mail :"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineMdpTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineLoginTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelineMailTop" />
 
@@ -110,8 +166,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telephone :"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineSiteTop"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
         app:layout_constraintTop_toBottomOf="@+id/guidelineTelephoneTop" />
 
@@ -120,8 +177,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prenom :"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelineMailTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelinePrenomTop" />
 
@@ -130,30 +188,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nom :"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelinePrenomTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelineNomTop" />
 
-    <TextView
-        android:id="@+id/textViewInscriptionActiviteEntreprise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Activité de l'entreprise :"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineNomTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
-        app:layout_constraintTop_toTopOf="@+id/guidelineActiviteTop" />
 
-    <TextView
-        android:id="@+id/textViewInscriptionRaison"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Raison sociale :"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineActiviteTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
-        app:layout_constraintTop_toTopOf="@+id/guidelineRaisonTop" />
+
 
 
     <Switch
@@ -162,20 +204,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineSecteurTop"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextBegin"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextViewEnd"
         app:layout_constraintTop_toBottomOf="@+id/guidelineExpositionTop" />
 
-    <EditText
-        android:id="@+id/editTextTextInscriptionRaisonSociale"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineActiviteTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guidelineRaisonTop" />
 
     <EditText
         android:id="@+id/editTextTextInscriptionNom"
@@ -183,9 +215,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextInscriptionPrenom"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
         app:layout_constraintTop_toTopOf="@+id/guidelineNomTop" />
 
     <EditText
@@ -194,9 +227,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guidelineMailTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEditTextBegin"
         app:layout_constraintTop_toTopOf="@+id/guidelinePrenomTop" />
 
     <Spinner
@@ -205,7 +239,7 @@
         android:layout_height="0dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineSpinnerBottom"
-        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
         app:layout_constraintTop_toTopOf="@+id/guidelineSpinnerTop" />
 
@@ -213,23 +247,60 @@
         android:id="@+id/buttonInscriptionQuitter"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#7D3C98"
         android:text="Quitter"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="@id/guideline5"
-        app:layout_constraintStart_toStartOf="@id/guideline4"
-        app:layout_constraintTop_toTopOf="@id/guideline3" />
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineBottomBtn"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEditTextEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineEditTextBegin"
+        app:layout_constraintTop_toTopOf="@id/guidelineTopBtn" />
 
     <Button
         android:id="@+id/buttonInscriptionValider"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:backgroundTint="#7D3C98"
         android:text="S'inscrire"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineBottomBtn"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextViewEnd"
         app:layout_constraintStart_toStartOf="@id/guideline_verticalWidget"
-        app:layout_constraintTop_toTopOf="@id/guideline3" />
+        app:layout_constraintTop_toTopOf="@id/guidelineTopBtn" />
+
+
+    <TextView
+        android:id="@+id/textViewInscriptionMdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe :"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTelephoneTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
+        app:layout_constraintTop_toTopOf="@+id/guidelineMdpTop" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineRaisonTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEditTextBegin"
+        app:layout_constraintStart_toStartOf="@+id/guidelineTextViewEnd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewInscriptionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login :"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMdpTop"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTextViewEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
+        app:layout_constraintTop_toTopOf="@+id/guidelineLoginTop" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -240,91 +311,88 @@
         app:layout_constraintGuide_percent="0.10" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineTextViewEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.45" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guidelineEditTextBegin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/guidelineEditTextEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.90" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guidelineTopBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.89" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/guidelineBottomBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.96" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSpinnerTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.74" />
+        app:layout_constraintGuide_percent="0.81" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSpinnerBottom"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
-
+        app:layout_constraintGuide_percent="0.87" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSecteurTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.67" />
+        app:layout_constraintGuide_percent="0.76" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineExpositionTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57" />
-
+        app:layout_constraintGuide_percent="0.68" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSiteTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
+        app:layout_constraintGuide_percent="0.61" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTelephoneTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.54" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMailTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
-
+        app:layout_constraintGuide_percent="0.34" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinePrenomTop"
@@ -340,14 +408,12 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.21" />
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMdpTop"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39" />
-
+        app:layout_constraintGuide_percent="0.47" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineActiviteTop"
@@ -363,26 +429,11 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.09" />
 
-    <TextView
-        android:id="@+id/textViewInscriptionMdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mot de passe :"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineTelephoneTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline_verticalWidget"
-        app:layout_constraintTop_toTopOf="@+id/guidelineMdpTop" />
-
-    <TextView
-        android:id="@+id/textViewInscriptionTitre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inscription"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineRaisonTop"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLoginTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

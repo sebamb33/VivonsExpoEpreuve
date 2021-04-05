@@ -29,21 +29,29 @@ class UtilisateurDAO{
         $requetePrepa->execute();
         $listeLibelleSecteurs = $requetePrepa->fetchAll(PDO::FETCH_ASSOC); 
 
-        foreach ($listeLibelleSecteurs as $unSecteur){
-
-            array_push($listeLibelleSecteurs, $unSecteur);
-        }
-
         return $listeLibelleSecteurs;
         
     }
 
+	public static function getCodeSecteur($unLibelleSecteur){
+		try{
+			$sql = "SELECT codeS FROM `secteur` WHERE libelleS = :libelleSecteur;" ;
+			$requetePrepa = DBConnex::getInstance()->prepare($sql);
+			$requetePrepa->bindParam("libelleSecteur", $unLibelleSecteur);
+			$requetePrepa->execute();
+			$reponse = $requetePrepa->fetch(PDO::FETCH_ASSOC);
+		}catch(Exception $e){
+			$reponse = "";
+		}
+		return $reponse;
+	}
 
-	public static function inscription($unLogin, $unMdp, $unNom, $unPrenom, $unTelephone, $unMail, $unStatut, $uneRaisonSociale, $uneActivite, $uneAnneeInscription, $unSiteInternet, $dejaExpose, $unEtatInscription, $unCodeS){
+
+	public static function inscription($unLogin, $unMdp, $unNom, $unPrenom, $unTelephone, $unMail, $unStatut, $uneRaisonSociale, $uneActivite, $uneAnneeInscription, $unSiteInternet, $dejaExpose, $unEtatInscription, $unlibelleSecteur){
 		try{
 			$sql = "INSERT INTO `utilisateur` (`id`, `Login`, `Mdp`, `nom`, `prenom`, `telephone`, `mail`, `statut`, `raisonSociale`, `activite`, `anneeInscription`, `siteInternet`, `dejaExpose`, `etatInscription`, `codeS`) 
-			VALUES (NULL, :login, :mdp, :nom, :prenom, :telephone, :mail, :statut, :raisonSociale, :activite, :anneeInscription, :siteInternet, :dejaExpose, :etatInscription, :codeS);" ;
-			
+			VALUES (NULL, :login, :mdp, :nom, :prenom, :telephone, :mail, :statut, :raisonSociale, :activite, :anneeInscription, :siteInternet, :dejaExpose, :etatInscription, (SELECT codeS FROM secteur WHERE libelleS = :libelleSecteur));" ;
+
 			$requetePrepa = DBConnex::getInstance()->prepare($sql);
 			$mdp =  md5($unMdp);
 			$requetePrepa->bindParam("login", $unLogin);
@@ -59,7 +67,7 @@ class UtilisateurDAO{
 			$requetePrepa->bindParam("siteInternet", $unSiteInternet);
 			$requetePrepa->bindParam("dejaExpose", $dejaExpose);
 			$requetePrepa->bindParam("etatInscription", $unEtatInscription);
-			$requetePrepa->bindParam("codeS", $unCodeS);
+			$requetePrepa->bindParam("libelleSecteur", $unlibelleSecteur);
 			$requetePrepa->execute();
 			$reponse = $requetePrepa->fetch(PDO::FETCH_ASSOC);
 		}catch(Exception $e){
