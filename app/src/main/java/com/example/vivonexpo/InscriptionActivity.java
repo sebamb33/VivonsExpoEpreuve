@@ -118,7 +118,7 @@ public class InscriptionActivity extends AppCompatActivity {
                     .add("libelleSecteur", mySpinner.getSelectedItem().toString())
                     .build();
             Request request = new Request.Builder()
-                    .url("http://192.168.1.91/vivonExpo/web/controleurs/inscription.php")
+                    .url("http://192.168.1.86/vivonExpo/web/controleurs/inscription.php")
                     .post(formBody)
                     .build();
 
@@ -146,7 +146,7 @@ public class InscriptionActivity extends AppCompatActivity {
     public void remplisageSpinnerSecteurs() throws IOException {
 
         Request request = new Request.Builder()
-                .url("http://192.168.1.91/vivonExpo/web/controleurs/getLibelleSecteurs.php")
+                .url("http://192.168.1.86/vivonExpo/web/controleurs/getLibelleSecteurs.php")
                 .build();
 
         Call call = client.newCall(request);
