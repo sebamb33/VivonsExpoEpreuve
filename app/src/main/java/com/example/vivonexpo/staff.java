@@ -21,6 +21,9 @@ public class staff extends AppCompatActivity {
 
 
 
+
+
+
         //Je recupere ma textview
         final TextView textNomStaff = (TextView)findViewById(R.id.textNomStaff);
         //je recupere le getExtra de mon intent
@@ -32,10 +35,25 @@ public class staff extends AppCompatActivity {
         try {
             //Je set mon objet JSON
             objectStaff = new JSONObject(stringStaff);
-            textNomStaff.setText(objectStaff.getString("prenom") +" "+objectStaff.getString("nom"));
+            textNomStaff.setText("Staff : "+ objectStaff.getString("prenom") +" "+objectStaff.getString("nom"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+
+
+
+        //je recupere mon bouton avec son ID
+        final Button buttonGestionUnivers = (Button) findViewById(R.id.buttonGestionUnivers);
+        //je rajoute un evenement click sur le boutton
+        buttonGestionUnivers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //J'appelle la classe InscriptionActivity
+                Intent intent = new Intent(staff.this, gestionUniversActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 

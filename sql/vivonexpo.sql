@@ -1,23 +1,24 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Ven 19 Mars 2021 à 16:36
--- Version du serveur :  5.6.17
--- Version de PHP :  5.5.12
+-- Hôte : 127.0.0.1:3306
+-- Généré le : ven. 09 avr. 2021 à 11:26
+-- Version du serveur :  5.7.31
+-- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `vivonsexpo`
+-- Base de données : `vivonexpo`
 --
 
 -- --------------------------------------------------------
@@ -26,6 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `allee`
 --
 
+DROP TABLE IF EXISTS `allee`;
 CREATE TABLE IF NOT EXISTS `allee` (
   `numH` varchar(1) NOT NULL,
   `codeA` varchar(2) NOT NULL,
@@ -33,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `allee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `allee`
+-- Déchargement des données de la table `allee`
 --
 
 INSERT INTO `allee` (`numH`, `codeA`) VALUES
@@ -48,6 +50,7 @@ INSERT INTO `allee` (`numH`, `codeA`) VALUES
 -- Structure de la table `demande`
 --
 
+DROP TABLE IF EXISTS `demande`;
 CREATE TABLE IF NOT EXISTS `demande` (
   `numD` varchar(4) NOT NULL,
   `dateD` date DEFAULT NULL,
@@ -59,11 +62,11 @@ CREATE TABLE IF NOT EXISTS `demande` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `demande`
+-- Déchargement des données de la table `demande`
 --
 
 INSERT INTO `demande` (`numD`, `dateD`, `motif`, `statusDemande`, `id`) VALUES
-('1', '2021-03-17', 'Exemple motif', 0, '1');
+('1', '2021-03-17', 'Exemple motif', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -71,13 +74,14 @@ INSERT INTO `demande` (`numD`, `dateD`, `motif`, `statusDemande`, `id`) VALUES
 -- Structure de la table `hall`
 --
 
+DROP TABLE IF EXISTS `hall`;
 CREATE TABLE IF NOT EXISTS `hall` (
   `numH` varchar(1) NOT NULL,
   PRIMARY KEY (`numH`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `hall`
+-- Déchargement des données de la table `hall`
 --
 
 INSERT INTO `hall` (`numH`) VALUES
@@ -91,6 +95,7 @@ INSERT INTO `hall` (`numH`) VALUES
 -- Structure de la table `secteur`
 --
 
+DROP TABLE IF EXISTS `secteur`;
 CREATE TABLE IF NOT EXISTS `secteur` (
   `codeS` varchar(2) NOT NULL,
   `libelleS` varchar(25) DEFAULT NULL,
@@ -100,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `secteur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `secteur`
+-- Déchargement des données de la table `secteur`
 --
 
 INSERT INTO `secteur` (`codeS`, `libelleS`, `codeU`) VALUES
@@ -135,6 +140,7 @@ INSERT INTO `secteur` (`codeS`, `libelleS`, `codeU`) VALUES
 -- Structure de la table `stand`
 --
 
+DROP TABLE IF EXISTS `stand`;
 CREATE TABLE IF NOT EXISTS `stand` (
   `numH` varchar(1) NOT NULL,
   `codeA` varchar(2) NOT NULL,
@@ -152,6 +158,7 @@ CREATE TABLE IF NOT EXISTS `stand` (
 -- Structure de la table `travee`
 --
 
+DROP TABLE IF EXISTS `travee`;
 CREATE TABLE IF NOT EXISTS `travee` (
   `numT` varchar(2) NOT NULL,
   `numH` varchar(1) NOT NULL,
@@ -162,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `travee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `travee`
+-- Déchargement des données de la table `travee`
 --
 
 INSERT INTO `travee` (`numT`, `numH`, `codeS`) VALUES
@@ -174,6 +181,7 @@ INSERT INTO `travee` (`numT`, `numH`, `codeS`) VALUES
 -- Structure de la table `univers`
 --
 
+DROP TABLE IF EXISTS `univers`;
 CREATE TABLE IF NOT EXISTS `univers` (
   `codeU` varchar(3) NOT NULL,
   `libelleU` varchar(25) DEFAULT NULL,
@@ -183,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `univers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `univers`
+-- Déchargement des données de la table `univers`
 --
 
 INSERT INTO `univers` (`codeU`, `libelleU`, `numH`) VALUES
@@ -199,6 +207,7 @@ INSERT INTO `univers` (`codeU`, `libelleU`, `numH`) VALUES
 -- Structure de la table `utilisateur`
 --
 
+DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `Login` varchar(25) NOT NULL,
@@ -217,17 +226,18 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `codeS` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `UTILISATEUR_SECTEUR0_FK` (`codeS`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `utilisateur`
+-- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`,`Login`, `Mdp`, `nom`, `prenom`, `telephone`, `mail`, `statut`, `raisonSociale`, `activite`, `anneeInscription`, `siteInternet`, `dejaExpose`, `etatInscription`, `codeS`) VALUES
-('1','root', '1234', 'root', 'root', '0668191385', 'seb@gmail.com', 'exposant', 'sebAndCo', 'Agriculture', 2021, 'lol', 0, 0, '1');
+INSERT INTO `utilisateur` (`id`, `Login`, `Mdp`, `nom`, `prenom`, `telephone`, `mail`, `statut`, `raisonSociale`, `activite`, `anneeInscription`, `siteInternet`, `dejaExpose`, `etatInscription`, `codeS`) VALUES
+(1, 'root', '81dc9bdb52d04dc20036dbd8313ed055', 'root', 'root', '0668191385', 'seb@gmail.com', 'exposant', 'sebAndCo', 'Agriculture', 2021, 'lol', 0, 0, '1'),
+(2, 'staff', '81dc9bdb52d04dc20036dbd8313ed055', 'Descamps', 'Clementin', NULL, NULL, 'staff', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
--- Contraintes pour les tables exportées
+-- Contraintes pour les tables déchargées
 --
 
 --
@@ -252,7 +262,7 @@ ALTER TABLE `secteur`
 -- Contraintes pour la table `stand`
 --
 ALTER TABLE `stand`
-  ADD CONSTRAINT `STAND_ALLEE_FK` FOREIGN KEY (`numH`, `codeA`) REFERENCES `allee` (`numH`, `codeA`),
+  ADD CONSTRAINT `STAND_ALLEE_FK` FOREIGN KEY (`numH`,`codeA`) REFERENCES `allee` (`numH`, `codeA`),
   ADD CONSTRAINT `STAND_TRAVEE0_FK` FOREIGN KEY (`numT`) REFERENCES `travee` (`numT`),
   ADD CONSTRAINT `STAND_UTILISATEUR1_FK` FOREIGN KEY (`id`) REFERENCES `utilisateur` (`id`);
 
@@ -274,6 +284,7 @@ ALTER TABLE `univers`
 --
 ALTER TABLE `utilisateur`
   ADD CONSTRAINT `UTILISATEUR_SECTEUR0_FK` FOREIGN KEY (`codeS`) REFERENCES `secteur` (`codeS`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
