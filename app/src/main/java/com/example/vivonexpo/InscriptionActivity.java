@@ -71,7 +71,6 @@ public class InscriptionActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 
