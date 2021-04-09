@@ -1,6 +1,6 @@
 <?php
 
-class VisiteurDAO
+class exposantDAO
 {
     public static function chargementExposant($univers)
     {
@@ -20,4 +20,3 @@ class VisiteurDAO
     }
 }
 
-?>
