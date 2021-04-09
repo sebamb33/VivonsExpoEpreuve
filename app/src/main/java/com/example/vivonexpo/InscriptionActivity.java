@@ -123,9 +123,14 @@ public class InscriptionActivity extends AppCompatActivity {
                     .build();
 
             Call call = client.newCall(request);
+
+            Toast.makeText(getApplicationContext(), "Inscription effectuee", Toast.LENGTH_LONG).show();
+
             call.enqueue(new Callback() {
                 public  void onResponse(Call call, Response response) throws IOException {
 
+                    Intent intent = new Intent(InscriptionActivity.this, ConnexionActivity.class);
+                    startActivity(intent);
                 }
 
                 public void onFailure(Call call, IOException e)

@@ -130,7 +130,7 @@
         android:id="@+id/textViewInscriptionExposition"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="Exposez-vous pour la 1ère fois sur le salon ?"
+        android:text="Avez-vous deja exposé sur le salon ?"
         android:textAlignment="center"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineSecteurTop"
