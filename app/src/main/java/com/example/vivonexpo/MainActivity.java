@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         buttonUniversVivonMaison.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, VisiteurActivity.class);
+                String univ = "Maison";
+                i.putExtra("univers", univ );
                 Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
                 startActivity(intent);
             }
