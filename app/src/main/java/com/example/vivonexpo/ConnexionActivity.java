@@ -69,7 +69,7 @@ public class ConnexionActivity extends AppCompatActivity{
                 .add("mdp",  textMdp.getText().toString())
                 .build();
         Request request = new Request.Builder()
-                .url("http://192.168.1.2/vivonExpo/vivonExpo/web/controleurs/authentication.php")
+                .url("http://192.168.1.2/vivonexpo/vivonexpo/web/controleurs/authentication.php")
                 .post(formBody)
                 .build();
 

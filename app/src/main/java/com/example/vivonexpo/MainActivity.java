@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
+import okhttp3.FormBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -40,17 +44,60 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        // Tout les bouttonUnivers Vont vers
+        // Tout les bouttonUnivers Vont vers VisiteurActivity
         final Button buttonUniversVivonMaison =(Button) findViewById((R.id.buttonUniversMaison));
+        final Button buttonUniversSport=(Button)findViewById(R.id.buttonUniversSport);
+        final Button buttonUniversFetes=(Button)findViewById(R.id.buttonUniversFetes);
+        final Button buttonUniversAuto=(Button)findViewById(R.id.buttonUniversAuto);
+        final Button buttonUniversEvaion=(Button)findViewById(R.id.buttonUniversEvasion);
 
         buttonUniversVivonMaison.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, VisiteurActivity.class);
+
                 String univ = "Maison";
-                i.putExtra("univers", univ );
                 Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                intent.putExtra("univers", univ );
+                startActivity(intent);
+            }
+        });
+
+
+        buttonUniversAuto.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String univ = "Auto";
+                Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                intent.putExtra("univers", univ );
+                startActivity(intent);
+            }
+        });
+        buttonUniversFetes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String univ = "Les fêtes";
+                Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                intent.putExtra("univers", univ );
+                startActivity(intent);
+            }
+        });
+        buttonUniversEvaion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                String univ ="Evasion";
+                Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                intent.putExtra("univers", univ );
+                startActivity(intent);
+            }
+        });
+        buttonUniversSport.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                String univ ="Sport";
+                Intent intent= new Intent(MainActivity.this,VisiteurActivity.class);
+                intent.putExtra("univers", univ );
                 startActivity(intent);
             }
         });
