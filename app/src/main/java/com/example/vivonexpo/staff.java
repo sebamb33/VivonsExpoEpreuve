@@ -54,6 +54,19 @@ public class staff extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        //Je récupère le boutton gestion des inscirption exposants avec l'id
+        final Button buttonGestionInscriptionExposant= (Button)findViewById(R.id.buttonGestionInscriptionExposant);
+        buttonGestionInscriptionExposant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Jouvre la page qui va afficher tout les exposants en attentes
+                Intent intent=new Intent(staff.this,gestionInscriptionExposants.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
 

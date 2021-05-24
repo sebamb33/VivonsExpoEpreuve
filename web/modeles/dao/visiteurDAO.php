@@ -17,10 +17,28 @@ class VisiteurDAO
             $reponse=$requetePrepa->fetchAll(PDO::FETCH_ASSOC);
         }catch(Exception $e)
         {
-            //Un commentaire parcque il faut commenter
+            return null;
         }
     
-        return  $reponse
+        return  $reponse;
     }
+
+    public static function infoExposant($raisonSociale)
+    {
+        try
+        {
+            $sql="SELECT activite,anneeInscription,siteInternet FROM utilisateur WHERE raisonSociale=:rs";
+            $requetePrepa=DBConnex::getInstance()->prepare($sql);
+            $requetePrepa->bindParam(":rs",$raisonSociale);
+            $requetePrepa->execute();
+            $reponse=$requetePrepa->fetch(PDO::FETCH_ASSOC);
+        }catch (Exception $e)
+        {
+            return null;
+        }
+        return $reponse;
+    }
+
+
 }
 ?>

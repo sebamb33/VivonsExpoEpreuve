@@ -21,7 +21,6 @@ class UtilisateurDAO{
 	}
 
 
-<<<<<<< HEAD
 
 	public static function getLibelleSecteurs(){
         $listeLibelleSecteurs = array();
@@ -76,22 +75,5 @@ class UtilisateurDAO{
 		}
 		return $reponse;
 	}
-=======
-// 	public static function inscription($, $mdp){
-// 		try{
-// 			$sql = "INSERT INTO " ;
-			
-// 			$requetePrepa = DBConnex::getInstance()->prepare($sql);
-// 			$mdp =  md5($mdp);
-// 			$requetePrepa->bindParam("login", $login);
-// 			$requetePrepa->bindParam("mdp", $mdp);
-// 			$requetePrepa->execute();
-// 			$reponse = $requetePrepa->fetch(PDO::FETCH_ASSOC);
-// 		}catch(Exception $e){
-// 			$reponse = "";
-// 		}
-// 		return $reponse;
-// 	}
-// }
->>>>>>> cb01adafa52557b079f70c07dac5ebd2573a5533
+
 }

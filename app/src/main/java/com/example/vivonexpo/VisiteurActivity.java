@@ -83,7 +83,17 @@ public class VisiteurActivity extends AppCompatActivity {
                                 listViewVisiteur.setAdapter(arrayAdapterExposant);
                             }
                         });
-
+                            // Permettre à l'utilisateur de cliquer
+                            ListView listViewVisiteur = findViewById(R.id.listView_listeExposant);
+                            listViewVisiteur.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Object raisonSociale = listViewVisiteur.getItemAtPosition(i);
+                                    Intent intent = new Intent(VisiteurActivity.this, affichageExposantActivity.class);
+                                    intent.putExtra("raisonSoc",raisonSociale.toString());
+                                    startActivity(intent);
+                                }
+                            });
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() { //Remplissage du spinner par les lettres de l'alphabet
@@ -144,6 +154,7 @@ public class VisiteurActivity extends AppCompatActivity {
                         Log.d("ccr", String.valueOf(e));
 
                     }
+
 
 
 
